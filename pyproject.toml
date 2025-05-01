@@ -1,0 +1,7 @@
+[project]
+name = "django-test"
+version = "0.1.0"
+description = "Django repo for testing stuff"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["django", "psycopg2-binary", "python-dotenv"]
