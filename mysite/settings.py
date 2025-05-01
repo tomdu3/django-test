@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "send_email",
-    "temp",
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -145,4 +145,3 @@ print(DEFAULT_FROM_EMAIL)
 
 # For development only - to see emails in console
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
