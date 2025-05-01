@@ -4,35 +4,20 @@ Here's a django repository that I'm using to test out some new features.
 
 ## Installation
 
+- For Python environment, we are using [uv](https://docs.astral.sh/uv/guides/install-python/) to run the server.
 
-```bash
-git clone https://github.com/tomdu3/django-test.git
-cd django-test
+- There's a [.env.example](.env.example) file that you can copy to `.env` and fill in the values for your environment variables.
+
+- Run `uv run manage.py runserver` to start the server. If you don't have python environment installed, it will install it automatically.
+- When everything is ready, you will see a message similar to this:
+
 ```
-Activate  your virtualenv or install it in one of the following ways:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-or
-
-```bash
-pip install virtualenv
-virtualenv venv
-source venv/bin/activate
+Django version 3.2.3, using settings 'test.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CONTROL-C.
 ```
 
-Then install the requirements:
-
-```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-
-Then open http://localhost:8000 in your browser.
-
+Then open <http://localhost:8000> in your browser.
 
 ## Features
 
