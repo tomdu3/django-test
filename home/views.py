@@ -11,3 +11,7 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def dynamic_url(request,id):
+	print(f"This is the value that we got in the func -› {id}")
+	return render (request,"dynamic_template.html", context={"id":id, "name":"Deepika"})
