@@ -11,8 +11,8 @@ content="width=device-width, initial-scale=1.0">
     <p>Django is really nice.</p>
     <p>Home Page.</p>
     <p>
-      <a href="/contact"> Contact </a> | 
-      <a href="/about"> About </a>
+      <a href={% url 'contact' %}> Contact </a> | 
+      <a href={% url 'about' %}> About </a>
     </p>
   </body>
 </html>
