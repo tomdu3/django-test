@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>{{title}} Page</h1>
+    {% for item in items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}!</p>
+    {% else %}
+        <p>Please log in to access this page.</p>
+    {% endif %}
+
+    <p>{{ text|lower }}</p>   <!-- Convert text to lowercase -->
+    <p>{{ date|date:"D d M Y" }}</p>   <!-- Format date -->
+    <p>{{ number|floatformat:2 }}</p>
+  </body>
+</html>
+
