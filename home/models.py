@@ -5,6 +5,7 @@ from django.db import models
 class Test(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
+    country = models.CharField(max_length=100, default="UK")
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
