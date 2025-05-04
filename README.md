@@ -46,3 +46,17 @@ Then open <http://localhost:8000> in your browser.
 ## Features
 
 - send email helper function
+
+## Resources
+
+### Articles/Docs
+
+- [Django documentation](https://docs.djangoproject.com/)
+- [Django REST framework](https://www.django-rest-framework.org/)
+- [Docker documentation - Startup Order](https://docs.docker.com/compose/how-tos/startup-order/)
+- [DockerHub - Postgres](https://hub.docker.com/_/postgres)
+- [Using uv in Docker](https://docs.astral.sh/uv/guides/integration/docker/)
+
+### Videos
+
+- [BugBytes: Docker - Django and PostgreSQL setup (with uv) from scratch!](https://youtu.be/37aNpE-9dD4)
