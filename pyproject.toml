@@ -6,6 +6,9 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "django",
+    "django-currencies>=0.10.1",
+    "django-prices-openexchangerates>=0.1.15",
+    "psycopg2>=2.9.10",
     "psycopg2-binary>=2.9.10",
     "python-dotenv",
 ]
