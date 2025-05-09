@@ -56,6 +56,9 @@ Then open <http://localhost:8000> in your browser.
 - [Docker documentation - Startup Order](https://docs.docker.com/compose/how-tos/startup-order/)
 - [DockerHub - Postgres](https://hub.docker.com/_/postgres)
 - [Using uv in Docker](https://docs.astral.sh/uv/guides/integration/docker/)
+- [How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu)
+- [How to Set Up a Currency Converter in Django?](https://www.horilla.com/blogs/how-to-set-up-a-currency-converter-in-django/)
+- [Building a Currency Converter in Django: A Step-by-Step Guide](https://dev.to/rohitashsingh89/building-a-currency-converter-in-django-a-step-by-step-guide-560f)
 
 ### Videos
 
