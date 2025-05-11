@@ -4,7 +4,7 @@ class CurrencyConversionForm(forms.Form):
     amount = forms.FloatField(
         label='Amount',
         min_value=0.01,  # Add minimum value validation
-        widget=forms.NumberInput(attrs={'step': '0.01'})  # Better for decimal input
+        widget=forms.NumberInput(attrs={'step': '0.01'})  # for decimal input
     )
     
     # Define choices once to avoid repetition
