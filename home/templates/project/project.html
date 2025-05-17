@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+  <title>Django Server</title>
+  </head>
+<body >
+    <h1>Project Page</h1>
+    <p>Your lucky number is: <span style="font-weight: bold;">{{ lucky_number }}</span></p>
+    <p>
+      <a href={% url 'contact' %}> Contact </a> | 
+      <a href={% url 'about' %}> About </a>
+    </p>
+  </body>
+</html>

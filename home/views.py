@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
-
+import random
 
 def index(request):
     return render(request, "index.html")
@@ -42,3 +42,8 @@ def my_view(request):
     }
     # Pass context to the template
     return render(request, "basic.html", context)
+
+def project(request):
+    lucky_number = random.randint(0,99)
+    context={"lucky_number": lucky_number}
+    return render(request, "project/project.html", context)
