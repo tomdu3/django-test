@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "send_email",
     "home",
-    "currency_convert"
+    "currency_convert",
+    "school"
 ]
 
 MIDDLEWARE = [
