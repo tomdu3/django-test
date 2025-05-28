@@ -85,8 +85,8 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # Postgres settings
-DATABASE_URL = os.environ.get('DATABASE_URL')
-
+# DATABASE_URL = os.environ.get('DATABASE_URL')
+DATABASE_URL = None
 # Parse the database URL and set the DATABASES setting
 # Postgres Neon.tech settings
 if DATABASE_URL:
@@ -102,20 +102,18 @@ if DATABASE_URL:
             'PORT': 5432,
         }
     }
-else:
-    match os.getenv("DB_TYPE"):
-        case "postgres":
-            DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': os.getenv("DB_NAME"),
+elif os.getenv("DB_TYPE") == "postgres":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv("DB_NAME"),
                     'USER': os.getenv("DB_USER"),
                     'PASSWORD': os.getenv("DB_PASSWORD"),
                     'HOST': os.getenv("DB_HOST"),
                     'PORT': os.getenv("DB_PORT"),
                 }
             }
-        case "mysql":
+elif os.getenv("DB_TYPE") == "mysql":
             DATABASES = {
                 'default': {
                     'ENGINE': 'django.db.backends.mysql',
@@ -126,8 +124,8 @@ else:
                     'PORT':os.getenv("DB_PORT"),
                 }
             }
-        case _:
-            raise ValueError("Invalid DB_TYPE")
+else:
+    raise ValueError("Invalid DB_TYPE")
 
 
 # Password validation
