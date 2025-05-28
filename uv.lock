@@ -157,6 +157,7 @@ dependencies = [
     { name = "django" },
     { name = "django-currencies" },
     { name = "django-prices-openexchangerates" },
+    { name = "mysqlclient" },
     { name = "psycopg2" },
     { name = "psycopg2-binary" },
     { name = "python-dotenv" },
@@ -167,6 +168,7 @@ requires-dist = [
     { name = "django" },
     { name = "django-currencies", specifier = ">=0.10.1" },
     { name = "django-prices-openexchangerates", specifier = ">=0.1.15" },
+    { name = "mysqlclient", specifier = ">=2.2.7" },
     { name = "psycopg2", specifier = ">=2.9.10" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
     { name = "python-dotenv" },
@@ -192,6 +194,16 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/6c/47/623f6009303827ccd3da5dc9eba7919c66d9990e2be63208bb6d6a04f0af/jsonfield-2.1.1.tar.gz", hash = "sha256:ed7c5e1829e9453e24a8bebef1e702ffe402e6def6b326f0e0b88764c59a6dc7", size = 9142, upload-time = "2020-02-12T17:25:20.41Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/85/82/827d6d003596200bdf85973f5ac95ca0c6ed5c29d25d464273925238c3c1/jsonfield-2.1.1-py2.py3-none-any.whl", hash = "sha256:1ae437686daab56dfb619291d4774ac075016ab4cad24abf445ad05da03a85a8", size = 11585, upload-time = "2020-02-12T17:25:18.778Z" },
+]
+
+[[package]]
+name = "mysqlclient"
+version = "2.2.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/61/68/810093cb579daae426794bbd9d88aa830fae296e85172d18cb0f0e5dd4bc/mysqlclient-2.2.7.tar.gz", hash = "sha256:24ae22b59416d5fcce7e99c9d37548350b4565baac82f95e149cac6ce4163845", size = 91383, upload-time = "2025-01-10T12:06:00.763Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bb/b5/2a8a4bcba3440550f358b839638fe8ec9146fa3c9194890b4998a530c926/mysqlclient-2.2.7-cp312-cp312-win_amd64.whl", hash = "sha256:4b4c0200890837fc64014cc938ef2273252ab544c1b12a6c1d674c23943f3f2e", size = 208032, upload-time = "2025-01-10T11:56:29.879Z" },
+    { url = "https://files.pythonhosted.org/packages/29/01/e80141f1cd0459e4c9a5dd309dee135bbae41d6c6c121252fdd853001a8a/mysqlclient-2.2.7-cp313-cp313-win_amd64.whl", hash = "sha256:201a6faa301011dd07bca6b651fe5aaa546d7c9a5426835a06c3172e1056a3c5", size = 208000, upload-time = "2025-01-10T11:56:32.293Z" },
 ]
 
 [[package]]
