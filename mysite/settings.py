@@ -87,6 +87,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 # Parse the database URL and set the DATABASES setting
+# Postgres Neon.tech settings
 if DATABASE_URL:
     tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
 
@@ -101,16 +102,31 @@ if DATABASE_URL:
         }
     }
 else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": os.environ.get("POSTGRES_DB"),
-            "USER": os.environ.get("POSTGRES_USER"),
-            "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
-            "HOST": os.environ.get("DB_HOST", "db"),
-            "PORT": os.environ.get("DB_PORT", "5432"),
-        }
-    }
+    match os.getenv("DB_TYPE"):
+        case "postgres":
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': os.getenv("DB_NAME"),
+                    'USER': os.getenv("DB_USER"),
+                    'PASSWORD': os.getenv("DB_PASSWORD"),
+                    'HOST': os.getenv("DB_HOST"),
+                    'PORT': os.getenv("DB_PORT"),
+                }
+            }
+        case "mysql":
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'NAME': os.getenv("DB_NAME"),
+                    'USER': os.getenv("DB_USER"),
+                    'PASSWORD': os.getenv("DB_PASSWORD"),
+                    'HOST':os.getenv("DB_HOST"),
+                    'PORT':os.getenv("DB_PORT"),
+                }
+            }
+        case _:
+            raise ValueError("Invalid DB_TYPE")
 
 
 # Password validation
